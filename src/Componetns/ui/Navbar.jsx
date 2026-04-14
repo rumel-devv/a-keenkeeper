@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from '../../assets/logo.png'
-import { NavLink } from 'react-router';
+import { Link, NavLink } from 'react-router';
 import { FaHome } from 'react-icons/fa';
 import { IoMdTimer } from 'react-icons/io';
 import { ImStatsDots } from 'react-icons/im';
@@ -11,9 +11,9 @@ const Navbar = () => {
     return (
         <div className="navbar bg-base-100 shadow-sm px-3 md:px-20">
 
-            <div className="navbar-start">
+            <Link to='/' className="navbar-start">
                 <img src={logo} alt='logo' className="w-30" />
-            </div>
+            </Link>
 
             <div className="navbar-end">
                 <ul className="menu menu-horizontal px-4 space-x-4 hidden lg:flex text-[16] font-semibold">
