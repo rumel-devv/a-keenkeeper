@@ -2,7 +2,7 @@
 @plugin "daisyui";
 
 
-a.active {
+.active {
 background: #244D3F;
   color: white;
 }
