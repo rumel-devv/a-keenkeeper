@@ -10,17 +10,17 @@ const TimelineProvider = ({ children }) => {
 
   const handleCall = (friend) => {
     setCall(prev => [...prev, { ...friend, time: new Date() }]);
-    toast.success(`Called ${friend.name}  successfully`)
+    toast.success(`Called ${friend.name}  successfully`,{autoClose: 2000})
   };
 
   const handleText = (friend) => {
     setText(prev => [...prev, { ...friend, time: new Date() }]);
-    toast.success(`Text ${friend.name}  successfully`)
+    toast.success(`Text ${friend.name}  successfully`,{autoClose: 2000})
   };
 
   const handleVideo = (friend) => {
     setVideo(prev => [...prev, { ...friend, time: new Date() }]);
-    toast.success(`Video called ${friend.name}  successfully`)
+    toast.success(`Video called ${friend.name}  successfully`,{autoClose: 2000})
   };
 
   const data = {
