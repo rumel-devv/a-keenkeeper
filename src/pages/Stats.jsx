@@ -13,7 +13,7 @@ const Stats = () => {
 ]
 
     return (
-         <div className='w-full md:w-10/12 mx-auto flex flex-col justify-center my-8 '>
+         <div className='w-full md:w-10/12 mx-auto flex flex-col justify-center my-8 px-2'>
         <h2 className=' text-3xl font-semibold mb-3'>Frinedship Analytics</h2>
        <div className='bg-[#e0d4d4aa]  py-10 px-4 rounded-xl'>
         <p className='text-xl font-semibold'>By interaction</p>

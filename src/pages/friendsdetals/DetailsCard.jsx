@@ -17,7 +17,7 @@ const DetailsCard = ({expectedFriend}) => {
             <div className='bg-[#f1ebeb74] text-center space-y-2 py-6'>
                 <img className='w-20 h-20 rounded-full mx-auto' src={expectedFriend.picture} alt={expectedFriend.name}/>
                 <h2 className='text-xl font-semibold'> {expectedFriend.name} </h2>
-                 <div  className={`badge ${
+                 <div  className={`badge capitalize ${
                      expectedFriend.status === "ontrack"
                       ? "bg-[#244D3F] text-white"
                      : expectedFriend.status === "overdue"
@@ -27,7 +27,7 @@ const DetailsCard = ({expectedFriend}) => {
                      : ""
                      }`} > {expectedFriend.status} </div>
                      <br />
-                 <h3 className="badge  bg-[#CBFADB] text-black "> {expectedFriend.tags} </h3>
+                 <h3 className="badge uppercase bg-[#CBFADB] text-black "> {expectedFriend.tags} </h3>
                  <h2> {expectedFriend.bio} </h2>
                  <h3>Prefferrd: {expectedFriend.email} </h3>
 
@@ -68,15 +68,15 @@ const DetailsCard = ({expectedFriend}) => {
                     <h2 className='text-xl'>Quick check in</h2>
                     <div className='grid grid-cols-3 gap-3'>
 
-                        <div onClick={() => handleCall(expectedFriend)} className='bg-[#ffffff] p-6 flex flex-col items-center rounded-2xl'>
+                        <div onClick={() => handleCall(expectedFriend)} className='bg-[#ffffff] p-6 flex flex-col items-center rounded-2xl cursor-pointer'>
                             <MdAddIcCall />
                              Call
                         </div>
-                        <div onClick={() => handleText(expectedFriend)} className='bg-[#ffffff] p-6 flex flex-col items-center rounded-2xl'>
+                        <div onClick={() => handleText(expectedFriend)} className='bg-[#ffffff] p-6 flex flex-col items-center rounded-2xl cursor-pointer'>
                             <MdTextsms/>
                              Text
                         </div>
-                        <div onClick={() => handleVideo(expectedFriend)} className='bg-[#ffffff] p-6 flex flex-col items-center rounded-2xl'>
+                        <div onClick={() => handleVideo(expectedFriend)} className='bg-[#ffffff] p-6 flex flex-col items-center rounded-2xl cursor-pointer'>
                             <FaVideo/>
                              Video
                         </div>

@@ -9,9 +9,9 @@ const FriendsCard = ({friend}) => {
                 <img className='w-20 h-20 rounded-full mx-auto' src={friend.picture} alt={friend.name}/>
                 <h2 className='text-xl font-semibold'> {friend.name} </h2>
                 <h3> {friend.days_since_contact}d ago </h3>
-                 <h3 className="badge bg-[#CBFADB] text-black "> {friend.tags} </h3>
+                 <h3 className="badge bg-[#CBFADB] text-black uppercase"> {friend.tags} </h3>
                  <br />
-                 <div  className={`badge ${
+                 <div  className={`badge capitalize ${
                      friend.status === "ontrack"
                       ? "bg-[#244D3F] text-white"
                      : friend.status === "overdue"
