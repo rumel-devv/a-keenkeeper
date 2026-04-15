@@ -61,7 +61,7 @@ const DetailsCard = ({expectedFriend}) => {
                             <p>Connect every <span className='font-semibold'>30 days</span></p>
                         </div>
                         <div>
-                            <button className='btn btn-sm text-md'>edit</button>
+                            <button className='px-3 py-0.5 rounded-sm bg-[#244D3F] text-md text-white'>edit</button>
                         </div>
                 </div>
                 <div className='bg-[#f1ebeb74] w-full py-10 px-4 space-y-3 '>
