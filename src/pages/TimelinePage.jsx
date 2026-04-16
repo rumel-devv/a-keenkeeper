@@ -8,7 +8,7 @@ import textImg from "../assets/text.png";
 const TimelinePage = () => {
   const { call, text, video } = useContext(TimelineContext);
 
-  const [filter, setFilter] = useState(""); 
+  const [filter, setFilter] = useState("all"); 
 
   return (
     <div className="py-6 w-11/12 md:w-9/12 mx-auto">
@@ -25,6 +25,7 @@ const TimelinePage = () => {
             tabIndex={0}
             className="dropdown-content menu bg-base-100 rounded-box z-10 w-52 p-2 shadow"
           >
+            <li onClick={() => setFilter("all")}><a>All</a></li>
             <li onClick={() => setFilter("call")}><a>Call</a></li>
             <li onClick={() => setFilter("text")}><a>Text</a></li>
             <li onClick={() => setFilter("video")}><a>Video</a></li>
@@ -32,7 +33,7 @@ const TimelinePage = () => {
         </div>
       </div>
 
-      {(filter === "" || filter === "call") &&
+      {(filter === "all" || filter === "call") &&
         call.map((item, i) => (
           <div
             key={"call-" + i}
@@ -48,7 +49,7 @@ const TimelinePage = () => {
           </div>
         ))}
 
-      {(filter === "" || filter === "text") &&
+      {(filter === "all" || filter === "text") &&
         text.map((item, i) => (
           <div
             key={"text-" + i}
@@ -63,7 +64,7 @@ const TimelinePage = () => {
             </div>
           </div>
         ))}
-      {(filter === "" || filter === "video") &&
+      {(filter === "all" || filter === "video") &&
         video.map((item, i) => (
           <div
             key={"video-" + i}
